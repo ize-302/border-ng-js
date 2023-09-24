@@ -14,6 +14,9 @@ npm i border-ng-js
 // example.js
 import checkBoundary from border-ng-js
 
-checkBoundary(6.762809634090966, 3.2435282387767383) // true
-checkBoundary(2.743751673926603, 7.322015625519072) // false
+const check1 = await checkBoundary(2.743751673926603, 7.322015625519072)
+console.log(check1) // false
+
+const check2 = await checkBoundary(6.762809634090966, 3.2435282387767383)
+console.log(check2) // true
 ```
