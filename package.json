@@ -1,0 +1,19 @@
+{
+  "name": "border-ng-js",
+  "module": "index.js",
+  "dependencies": {
+    "@turf/boolean-within": "^6.5.0",
+    "@turf/helpers": "^6.5.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "type": "module",
+  "description": "A JavaScript module that provides a boolean result, `true` or `false`, indicating whether a provided coordinate falls within the borders of Nigeria 🇳🇬",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}
