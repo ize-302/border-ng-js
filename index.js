@@ -14,9 +14,11 @@ import path from 'path';
  */
 const checkBoundary = async (lat, lng) => {
   const coordinate = point([lng, lat])
+
   for (let i = 0; i < 3; i++) {
     const file = path.join('./geodata/', `gadm41_NGA_${i}.json`)
     const file_exists = await fs.existsSync(file)
+
     if (file_exists) {
       fs.readFile(file, 'utf8', (err, data) => {
         const country_data = JSON.parse(data);
