@@ -16,7 +16,12 @@ const checkBoundary = async (lat, lng) => {
   for (let i = 0; i < 3; i++) {
     const response = await fetch(`https://geodata.ucdavis.edu/gadm/gadm4.1/json/gadm41_NGA_${i}.json`);
     const country_data = await response.json();
-    return booleanWithin(coordinate, country_data.features[0]["geometry"])
+
+    if (booleanWithin(coordinate, country_data.features[0]["geometry"])) {
+      return true;
+    } else {
+      return false;
+    }
   }
 };
 
