@@ -20,7 +20,7 @@ const checkBoundary = async (lat, lng) => {
     const file_exists = await fs.existsSync(file)
 
     if (file_exists) {
-      fs.readFile(file, 'utf8', (err, data) => {
+      fs.readFile(file, 'utf8', (_err, data) => {
         const country_data = JSON.parse(data);
         if (booleanWithin(coordinate, country_data.features[0]['geometry'])) {
           return true
