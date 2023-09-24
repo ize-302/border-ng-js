@@ -1,7 +1,5 @@
 import booleanWithin from "@turf/boolean-within";
 import { point } from "@turf/helpers";
-import fs from 'fs';
-import path from 'path';
 
 /**
  * Checks if given coordinate is within Nigeria
@@ -13,23 +11,18 @@ import path from 'path';
  * @returns {boolean}
  */
 const checkBoundary = async (lat, lng) => {
-  const coordinate = point([lng, lat])
+  const coordinate = point([lng, lat]);
 
   for (let i = 0; i < 3; i++) {
-    const file = path.join('./geodata/', `gadm41_NGA_${i}.json`)
-    const file_exists = await fs.existsSync(file)
+    const response = await fetch(`https://geodata.ucdavis.edu/gadm/gadm4.1/json/gadm41_NGA_${i}.json`);
+    const country_data = await response.json();
 
-    if (file_exists) {
-      fs.readFile(file, 'utf8', (_err, data) => {
-        const country_data = JSON.parse(data);
-        if (booleanWithin(coordinate, country_data.features[0]['geometry'])) {
-          return true
-        } else {
-          return false
-        }
-      });
+    if (booleanWithin(coordinate, country_data.features[0]["geometry"])) {
+      return true;
+    } else {
+      return false;
     }
   }
-}
+};
 
-export default checkBoundary
+export default checkBoundary;

@@ -1,6 +1,6 @@
 {
   "name": "border-ng-js",
-  "module": "index.js",
+  "module": "source/index.js",
   "type": "module",
   "repository": "ize-302/border-ng-js",
   "description": "A JavaScript module that provides a boolean result, `true` or `false`, indicating whether a provided coordinate falls within the borders of Nigeria 🇳🇬",
@@ -11,11 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "@turf/boolean-within": "^6.5.0",
-    "@turf/helpers": "^6.5.0",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "@turf/helpers": "^6.5.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "bun source/index.js"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
