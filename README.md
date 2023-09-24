@@ -5,7 +5,7 @@ A JavaScript module that provides a boolean result, `true` or `false`, indicatin
 #### Installation:
 
 ```bash
-npm i boundary-nga-js
+npm i border-ng-js
 ```
 
 #### Usage:
