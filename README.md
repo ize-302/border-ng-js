@@ -1,6 +1,6 @@
 # 🗺️ border-ng-js
 
-A JavaScript module that provides a boolean result, `true` or `false`, indicating whether a provided coordinate falls within the borders of Nigeria 🇳🇬
+A JavaScript package that provides a boolean result, `true` or `false`, indicating whether a provided coordinate falls within the borders of Nigeria 🇳🇬
 
 #### Installation:
 
@@ -13,6 +13,10 @@ npm i border-ng-js
 ```bash
 // example.js
 import checkBoundary from border-ng-js
+
+checkBoundary(lat, lng) // PS: Latitude must come before longitude
+
+// Practical example
 
 const check1 = await checkBoundary(2.743751673926603, 7.322015625519072)
 console.log(check1) // false
