@@ -4,7 +4,7 @@
   "type": "module",
   "repository": "ize-302/border-ng-js",
   "description": "A JavaScript module that provides a boolean result, `true` or `false`, indicating whether a provided coordinate falls within the borders of Nigeria 🇳🇬",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./source/index.js",
   "exports": "./source/index.js",
   "author": "Adavize Hassan",
